@@ -9,18 +9,21 @@ const PORT = process.env.PORT || 3000;
 const users = require("./routes/users");
 
 // CORS configuration
-const corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "https://user-management-fullstack-gamma.vercel.app",
-    "capacitor://localhost",
-    "https://localhost",
-    "http://10.178.181.69:5173",
-    "file://",
-  ],
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
+app.use(
+  cors({
+    origin: [
+      "capacitor://localhost",
+      "http://localhost",
+      "http://localhost:8080",
+      "http://localhost:5173",
+      "file://",
+      "https://user-management-two.onrender.com", // ADD THIS LINE!
+      "http://localhost:3000", // Just in case!
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(cors(corsOptions));
 

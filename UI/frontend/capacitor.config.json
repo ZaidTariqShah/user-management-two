@@ -1,0 +1,9 @@
+{
+"appId": "com.zaid.usermanagement",
+"appName": "User-Management",
+"webDir": "dist",
+"server": {
+"androidScheme": "https",
+"cleartext": true
+}
+}

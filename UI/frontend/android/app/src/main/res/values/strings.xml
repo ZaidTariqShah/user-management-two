@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">User-Management</string>
+    <string name="title_activity_main">User-Management</string>
+    <string name="package_name">com.zaid.usermanagement</string>
+    <string name="custom_url_scheme">com.zaid.usermanagement</string>
+</resources>

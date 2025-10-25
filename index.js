@@ -13,6 +13,10 @@ const corsOptions = {
   origin: [
     "http://localhost:5173",
     "https://user-management-fullstack-gamma.vercel.app",
+    "capacitor://localhost",
+    "https://localhost",
+    "http://10.178.181.69:5173",
+    "file://",
   ],
   credentials: true,
   optionsSuccessStatus: 200,

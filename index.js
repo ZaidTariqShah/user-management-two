@@ -8,12 +8,17 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 const users = require("./routes/users");
 
-app.use(
-  cors({
-    origin: "http://localhost:5173", // Your React app URL
-    credentials: true,
-  })
-);
+// CORS configuration
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://user-management-fullstack-gamma.vercel.app",
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 //body parser
 app.use(express.json());

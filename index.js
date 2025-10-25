@@ -16,8 +16,9 @@ const corsOptions = {
     "http://localhost:8080",
     "http://localhost:5173",
     "file://",
-    "https://user-management-two.onrender.com", // your deployed backend
-    "https://user-management-fullstack-o2p8.onrender.com", // old Render backend (optional)
+    "https://user-management-two.onrender.com",
+    "https://localhost", // <- ADD THIS LINE
+    "http://localhost:3000",
     "https://user-management-fullstack-gamma.vercel.app",
   ],
   credentials: true,

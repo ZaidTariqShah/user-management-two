@@ -33,10 +33,14 @@ app.use(express.json());
 // connect to database
 connectDB();
 
-app.use("/api", users);
+app.use("/", users);
 app.get("/", (req, res) => {
   console.log("I am inside homepage router");
   res.send("Hey Welcome here!");
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
 });
 
 app.listen(PORT, () => {
